@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: ; */
+}
+
+h3 {
+    font-size: 30px;
+    text-decoration: underline;
+    color: black;
+}
+
+button.normal {
+    width: 120px;
+    height: 30px;
+    margin-top: 6px;
+    justify-content: center;
+    border-radius: 12px;
+    border: none;
+}
+
+body {
+    width: 100%;
+    /* background: #009FFF;
+    background: -webkit-linear-gradient(to bottom, #ec2F4B, #009FFF);
+    background: linear-gradient(to bottom, #ec2F4B, #009FFF); */
+}
+
+/************************** Header **************************/
+
+#header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 60px;
+    position: sticky;
+    /* background-color: green; */
+    background: #bdc3c7;
+    background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
+    background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
+
+}
+
+#header h3 {
+    padding-top: 15px;
+    padding-left: 15px;
+    text-decoration: none;
+}
+
+/********* navigation bar ********/
+
+.navbar {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 40px;
+}
+
+.navbar li {
+    justify-content: space-around;
+    list-style: none;
+    padding: 10px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+    color: white;
+    background-color: #165986;
+    padding: 6px;
+    border-radius: 10px;
+    transition: 1s ease;
+}
+
+/*********************** About ********************/
+
+#hero {
+    background-image: url(/images/banner1.jpg);
+    height: 90vh;
+    background-size: cover;
+    justify-content: center;
+    text-align: center;
+}
+
+#contain-hero {
+    position: relative;
+    width: 35%;
+    height: 35%;
+    margin: auto;
+    padding-top: 30px;
+    top: 130px;
+    left: 250px;
+}
+
+#contain-hero h1 {
+    font-family: 'Neonderthaw';
+    font-size: 50px;
+    color: white;
+}
+
+#contain-hero h4 {
+    color: white;
+    font-family: 'Marck Script';
+    font-size: 20px;
+}
+
+#contain-hero h2 {
+    color: white;
+    font-size: 30px;
+    font-family: 'Nokora';
+}
+
+#contain-hero p {
+    font-family: 'Marck Script';
+    font-size: 20px;
+    color: white;
+}
+
+/*********************** about ****************/
+
+#about {
+    height: 100vh;
+    background: #bdc3c7;
+    background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
+    background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    margin-top: 5px;
+}
+
+.aboutcontent {
+    margin: 30px;
+    height: 70%;
+    display: flex;
+    /* background-color: aqua; */
+}
+
+.aboutcontent .picture img {
+    border-radius: 19px;
+}
+
+#about .aboutme,
+#about .picture {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about .aboutme {
+    /* background-color: red; */
+    font-family: 'Marck Script';
+    font-size: 28px;
+}
+
+#about .aboutme {
+    font-size: 17px;
+}
+
+/********************** PORTFOLIO ***************/
+
+#projects {
+    height: 100vh;
+    background: #bdc3c7;
+    background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
+    background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projects .aboutprojects {
+    margin-top: 20px;
+    height: 60%;
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+#projects .projectdets {
+    padding: 0 20px;
+    width: 340px;
+    /* background-color: red; */
+    height: 500px;
+}
+
+#projects .projectdets img {
+    border-radius: 15px;
+}
+
+#projects .projectdets p {
+    font-weight: 600;
+    color: rgb(8, 67, 113);
+}
+
+
+/********************** contact ******************/
+#contact {
+    height: 100vh;
+    background: #bdc3c7;
+    background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
+    background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
+    justify-content: center;
+}
+
+#contact .sendmessage {
+    height: 88%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    box-shadow: 20px 20px 35px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    width: 370px;
+    top: 50px;
+    left: 470px;
+}
+
+#contact h3 {
+    margin-top: 10px;
+    padding-top: 12px;
+}
+
+#contact-form {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#contact-form .formgroup {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+#contact-form input {
+    padding: 8px;
+}
+
+#contact-form .sendbutton {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#contact-form .normal:hover {
+    color: white;
+    background-color: #165986;
+    padding: 6px;
+    border-radius: 10px;
+    transition: 1s ease;
+    border: none;
+}
+
+/***************** Footer *****************/
+#footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    padding: 5px;
+    position: sticky;
+}
+
+#footer span {
+    font-weight: 700;
+}
+
+#footer .footlogo {
+    margin-right: 40px;
+}
+
+#footer .footlogo a {
+    color: black;
+    padding: 0 7px;
+}
