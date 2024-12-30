@@ -22,6 +22,7 @@ button.normal {
 
 body {
     width: 100%;
+    overflow-x: hidden;
     /* background: #009FFF;
     background: -webkit-linear-gradient(to bottom, #ec2F4B, #009FFF);
     background: linear-gradient(to bottom, #ec2F4B, #009FFF); */
@@ -100,7 +101,7 @@ body {
 }
 
 #contain-hero h1 {
-    font-family: 'Neonderthaw';
+    font-family: 'Parisienne';
     font-size: 50px;
     color: white;
 }
@@ -136,7 +137,9 @@ body {
     display: flex;
     margin-top: 5px;
 }
-
+#about h3{
+    color: rgb(210, 203, 203);
+}
 .aboutcontent {
     margin: 30px;
     height: 70%;
@@ -163,13 +166,14 @@ body {
 }
 
 #about .aboutme {
-    font-size: 17px;
+    font-size: 19px;
 }
 
 /********************** PORTFOLIO ***************/
 
 #projects {
     height: 100vh;
+    width: 100%;
     background: #bdc3c7;
     background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
     background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
@@ -179,18 +183,31 @@ body {
     align-items: center;
 }
 
+#projects h3{
+    color: rgb(210, 203, 203);
+}
+
 #projects .aboutprojects {
     margin-top: 20px;
-    height: 60%;
+    height: 90vh;
     display: flex;
-    /* justify-content: space-around; */
+
 }
 
 #projects .projectdets {
-    padding: 0 20px;
-    width: 340px;
-    /* background-color: red; */
-    height: 500px;
+    margin: 0 40px;
+    width: 350px;
+    height: 520px;
+}
+
+#projects #dets1,
+#dets2,
+#dets3 {
+    border: 1px solid rgb(3, 59, 101);
+    justify-content: center;
+    text-align: center;
+    padding: 9px;
+    border-radius: 16px;
 }
 
 #projects .projectdets img {
