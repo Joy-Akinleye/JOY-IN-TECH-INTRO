@@ -28,57 +28,105 @@ body {
     background: linear-gradient(to bottom, #ec2F4B, #009FFF); */
 }
 
-/************************** Header **************************/
+/************************** Navbar **************************/
 
-#header {
+nav {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     height: 60px;
     position: sticky;
-    /* background-color: green; */
     background: #bdc3c7;
     background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
     background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
 
 }
 
-#header h3 {
+nav h3 {
     padding-top: 15px;
     padding-left: 15px;
     text-decoration: none;
 }
 
-/********* navigation bar ********/
-
-.navbar {
-    padding-top: 10px;
-    display: flex;
+nav ul {
     align-items: center;
     justify-content: center;
     padding-right: 40px;
+    display: flex;
+    /* flex-direction: row; */
 }
 
-.navbar li {
+nav ul li {
     justify-content: space-around;
     list-style: none;
-    padding: 10px;
+    padding: 12px;
 }
 
-.navbar li a {
+nav ul li a {
     text-decoration: none;
     color: black;
     font-size: 17px;
 }
 
-.navbar li a:hover,
-.navbar li a.active {
+nav ul li a:hover,
+nav ul li a.active {
     color: white;
     background-color: #165986;
     padding: 6px;
     border-radius: 10px;
     transition: 1s ease;
 }
+
+#navbar__menu-btn i {
+    color: black;
+}
+
+/**************** SideBar  ************/
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    left: auto;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    /* Makes sidebar above everything else */
+    background-color: linear-gradient(to bottom, #2c3e50, #bdc3c7);
+    backdrop-filter: blur(10px);
+    /* glass effect */
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.3);
+    /* display: none; */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* Hide sidebar */
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.show {
+    right: 0;
+    /* show sidebar */
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+#navbar__close-btn {
+    padding: 10px;
+}
+
+#navbar__close-btn i {
+    font-size: 30px;
+    color: black;
+}
+
+/* style="width: 50px; height: 50px; */
 
 /*********************** About ********************/
 
@@ -137,9 +185,11 @@ body {
     display: flex;
     margin-top: 5px;
 }
-#about h3{
+
+#about h3 {
     color: rgb(210, 203, 203);
 }
+
 .aboutcontent {
     margin: 30px;
     height: 70%;
@@ -183,7 +233,7 @@ body {
     align-items: center;
 }
 
-#projects h3{
+#projects h3 {
     color: rgb(210, 203, 203);
 }
 
@@ -308,4 +358,11 @@ body {
 #footer .footlogo a {
     color: black;
     padding: 0 7px;
+}
+
+/************************ RESPONSIVENESS ************/
+@media (max-width: 768px) {
+    .hideOnMobile {
+        display: "none";
+    }
 }
