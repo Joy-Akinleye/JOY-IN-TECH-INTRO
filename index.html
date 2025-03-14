@@ -12,19 +12,27 @@
 </head>
 
 <body>
-    <section id="header">
+    <nav>
         <a href="#"><img src="/images/logo1.png" alt="Logo with the letter J" style="width: 80px; height: 60px;"></a>
         <h3>AYOMIDE AKINLEYE</h3>
 
-        <div>
-            <ul class="navbar">
-                <li><a href="#" class="active">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#projects">PORTFOLIO</a></li>
-                <li><a href="#">BLOG</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-        </div>
+        <ul class="sidebar">
+            <span id="navbar__close-btn"><a href="#"><i class="fa-solid fa-xmark"></i></a></span>
+            <li><a href="#" class="active">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#projects">PORTFOLIO</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        <ul>
+            <li class="hideOnMobile"><a href="#" class="active">HOME</a></li>
+            <li class="hideOnMobile"><a href="#about">ABOUT</a></li>
+            <li class="hideOnMobile"><a href="#projects">PORTFOLIO</a></li>
+            <li class="hideOnMobile"><a href="#">BLOG</a></li>
+            <li class="hideOnMobile"><a href="#contact">CONTACT</a></li>
+            <span id="navbar__menu-btn"><a href="#"><i class="fa-solid fa-bars"></i></a></span>
+        </ul>
+    </nav>
     </section>
 
     <section id="hero">
@@ -131,7 +139,7 @@
             <a href="#"><i class="fa-brands fa-github"></i></a>
         </div>
     </section>
-
+    <script src="/script.js"></script>
 </body>
 
 </html>
