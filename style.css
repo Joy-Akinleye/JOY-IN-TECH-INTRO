@@ -24,6 +24,16 @@ button.normal {
     border: none;
 }
 
+nav,
+#hero,
+#about,
+#projects,
+#contact {
+    background: #bdc3c7;
+    background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
+    background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
+}
+
 
 
 /************************** Navbar **************************/
@@ -35,15 +45,10 @@ nav {
     justify-content: space-between;
     height: 60px;
     position: sticky;
-    background: #bdc3c7;
-    background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
-    background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
-
 }
 
 nav h3 {
-    padding-top: 15px;
-    padding-left: 15px;
+    padding: 15px 0 0 15px;
     text-decoration: none;
 }
 
@@ -98,12 +103,15 @@ nav ul li a.active {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    /* Hide sidebar */
+    visibility: hidden;
+    opacity: 0;
     transition: transform 0.3s ease-in-out;
 }
 
 .sidebar.show {
     right: 0;
+    visibility: visible;
+    opacity: 1;
     /* show sidebar */
 }
 
@@ -131,6 +139,12 @@ nav ul li a.active {
     background-image: url(/images/banner1.jpg);
     height: 90vh;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* keeps it fixed while scrolling */
+    height: 100vh;
+    width: 100vw;
     justify-content: center;
     text-align: center;
 }
@@ -173,9 +187,6 @@ nav ul li a.active {
 
 #about {
     height: 100vh;
-    background: #bdc3c7;
-    background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
-    background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -191,7 +202,6 @@ nav ul li a.active {
     margin: 30px;
     height: 70%;
     display: flex;
-    /* background-color: aqua; */
 }
 
 .aboutcontent .picture img {
@@ -207,7 +217,6 @@ nav ul li a.active {
 }
 
 #about .aboutme {
-    /* background-color: red; */
     font-family: 'Marck Script';
     font-size: 28px;
 }
@@ -221,9 +230,7 @@ nav ul li a.active {
 #projects {
     /* height: 100vh; */
     width: 100%;
-    background: #bdc3c7;
-    background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
-    background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
+
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -272,9 +279,6 @@ nav ul li a.active {
 /********************** contact ******************/
 #contact {
     height: 100vh;
-    background: #bdc3c7;
-    background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
-    background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
     justify-content: center;
 }
 
@@ -360,23 +364,46 @@ nav ul li a.active {
 }
 
 /************************ RESPONSIVENESS ************/
-@media (max-width: 768px) {
+
+@media (max-width: 900px) {
     .hideNotif {
         display: none;
     }
-    .sidebar {
-        width: 40%;
-    }
+
     #navbar__menu-btn {
         display: block;
     }
+
+    #hero {
+        background: #bdc3c7;
+        background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
+        background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
-@media (max-width: 425px) {
-    h3 {
-        font-size: 18px;
+/* iPad / tablet: screen width less than 900px but greater than 600px */
+@media (max-width: 900px) and (min-width: 600px) {
+    nav h3 {
+        font-size: 24px;
     }
+
+    .sidebar {
+        width: 40%;
+    }
+}
+
+/* mobile phones: screen width less than 480px but greater than 320px */
+@media (max-width: 599px) and (min-width: 320px) {
     .sidebar {
         width: 100%;
+    }
+
+    nav h3 {
+        font-size: 16px;
+        padding-top: 20px;
     }
 }
