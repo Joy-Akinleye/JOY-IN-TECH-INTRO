@@ -133,7 +133,7 @@ nav ul li a.active {
     display: none;
 }
 
-/*********************** About ********************/
+/*********************** Hero ********************/
 
 #hero {
     background-image: url(/images/banner1.jpg);
@@ -379,20 +379,31 @@ nav ul li a.active {
         background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
         background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
         width: 100%;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-/* iPad / tablet: screen width less than 900px but greater than 600px */
-@media (max-width: 900px) and (min-width: 600px) {
-    nav h3 {
-        font-size: 24px;
     }
 
-    .sidebar {
-        width: 40%;
+    /* iPad / tablet: screen width less than 900px but greater than 600px */
+    @media (max-width: 900px) and (min-width: 600px) {
+        nav h3 {
+            font-size: 24px;
+        }
+
+        .sidebar {
+            width: 40%;
+        }
+
+        #contain-hero {
+            position: relative;
+            width: 35%;
+            height: 35%;
+            margin: auto;
+            padding-top: 0;
+            top: 35%;
+            left: 0;
+        }
+
+        #contain-hero h1 {
+            font-size: 36px;
+        }
     }
 }
 
